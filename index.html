@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud assigment</title>
+    <link href="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+        " rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+            <h1 class="py-2 ">Bookmarker</h1>
+            <div class="bookmark_body d-flex flex-column justify-content-center align-items-center">
+                <h2 class="my-5 p-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+                
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="site_name w-100 my-4">
+                <label for="bookmarkName" class="pb-2 fw-semibold "><i class="fa-solid fa-book-bookmark pe-2"></i>Site name</label>
+                <input oninput="validateInput(this)" type="text" placeholder="Bookmark Name" class="form-control " id="bookmarkName">
+            </div>
+            <div class="site_URL w-100 my-4">
+                <label for="bookmarkURL" class="pb-2 fw-semibold"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input oninput="validateInput(this)" type="url" placeholder="Website URL" class="form-control " id="bookmarkURL">
+            </div>
+            <div class="text-center">
+                <button onclick="addWeb()" class="btn btn-submit px-5 " id="submitBtn">Submit</button>
+            </div>
+        </div>
+        
+    </main>
+    <table class="table mt-4 text-center bg-light mt-5 mx-auto ">
+        <thead>
+            <tr>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableContent"></tbody>
+    </table>
+    <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+        "></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
